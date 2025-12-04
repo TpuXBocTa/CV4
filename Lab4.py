@@ -10,11 +10,11 @@ def select_roi_on_frame(window_name, frame):
 
 def create_tracker(method_name: str):
     if method_name == "CSRT":
-        return cv2.legacy.TrackerCSRT_create()
+        return cv2.TrackerCSRT_create()
     elif method_name == "KCF":
-        return cv2.legacy.TrackerKCF_create()
+        return cv2.TrackerKCF_create()
     elif method_name == "MOSSE":
-        return cv2.legacy.TrackerMOSSE_create()
+        return cv2.TrackerMOSSE_create()
     else:
         raise ValueError(f"Unknown tracker method: {method_name}")
 
